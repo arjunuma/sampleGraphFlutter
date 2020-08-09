@@ -1,0 +1,50 @@
+[
+  {
+    "Time(s)": 0,
+    "BloodOxygen": 92.4,
+    "HeartRate": 115,
+    "RespiratoryRate": 18,
+    "Temperature": 38.6,
+    "CovidStatus": "Covid"
+  },
+  {
+    "Time(s)": 1,
+    "BloodOxygen": 94.9,
+    "HeartRate": 106,
+    "RespiratoryRate": 17,
+    "Temperature": 38.8,
+    "CovidStatus": "Covid"
+  },
+  {
+    "Time(s)": 2,
+    "BloodOxygen": 94,
+    "HeartRate": 90,
+    "RespiratoryRate": 17,
+    "Temperature": 38.1,
+    "CovidStatus": "Covid"
+  },
+  {
+    "Time(s)": 3,
+    "BloodOxygen": 93.5,
+    "HeartRate": 109,
+    "RespiratoryRate": 16,
+    "Temperature": 39.1,
+    "CovidStatus": "Covid"
+  },
+  {
+    "Time(s)": 4,
+    "BloodOxygen": 93.1,
+    "HeartRate": 109,
+    "RespiratoryRate": 18,
+    "Temperature": 39.1,
+    "CovidStatus": "Covid"
+  },
+  {
+    "Time(s)": 5,
+    "BloodOxygen": 92.8,
+    "HeartRate": 97,
+    "RespiratoryRate": 17,
+    "Temperature": 39.2,
+    "CovidStatus": "Covid"
+  }
+]
