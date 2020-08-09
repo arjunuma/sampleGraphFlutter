@@ -1,18 +1,19 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:sample_vitalsigns_1/models/reportTimeHeartRate.dart';
+import 'package:sample_vitalsigns_1/models/reports/reportTimeTemperature.dart';
 
 class ReportRepository {
-  Future<List<ReportTimeHeartRate>> getReports() async {
+  Future<List<ReportTimeTemperature>> getReports() async {
     String jsonString = await _loadFromAsset();
     return parseReports(jsonString);
   }
 
-  List<ReportTimeHeartRate> parseReports(String responseBody) {
+  List<ReportTimeTemperature> parseReports(String responseBody) {
     final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
     return parsed
-        .map<ReportTimeHeartRate>((json) => ReportTimeHeartRate.fromJson(json))
+        .map<ReportTimeTemperature>(
+            (json) => ReportTimeTemperature.fromJson(json))
         .toList();
   }
 

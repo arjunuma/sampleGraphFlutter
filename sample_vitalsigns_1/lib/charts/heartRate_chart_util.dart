@@ -1,9 +1,9 @@
 import 'package:sample_vitalsigns_1/models/timeHeartRate.dart';
 import 'package:charts_flutter/flutter.dart';
-import 'package:sample_vitalsigns_1/jsonParser/reportRepository.dart';
+import 'package:sample_vitalsigns_1/repositories/heartRateRepository.dart';
 
-class ChartUtil {
-  Future<List<Series>> getChartData() async {
+class HeartRateChartUtil {
+  Future<List<Series>> getHeartRateChartData() async {
     var reports = await ReportRepository().getReports().then((reports) {
       List<TimeHeartRate> vibrationData = [];
 
@@ -12,13 +12,14 @@ class ChartUtil {
             convertToDateTime(report.time), report.heartRate));
       });
 
-      return _createChartData(vibrationData);
+      return _createHeartRateChartData(vibrationData);
     });
 
     return reports;
   }
 
-  static List<Series> _createChartData(List<TimeHeartRate> timeHeartRateData) {
+  static List<Series> _createHeartRateChartData(
+      List<TimeHeartRate> timeHeartRateData) {
     var data = [
       new Series<TimeHeartRate, DateTime>(
         id: 'Desktop',
